@@ -1,0 +1,141 @@
+
+
+.botao {
+  width: 1px;
+  margin-left: -100px;
+}
+
+.menu {
+  margin: 10px;
+  margin-left: -1400px;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  display: inline;
+}
+
+.menu ul li a {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 10px;
+  background-color: #009ee2;
+  color: white;
+  padding: 12px;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: background 0.4s;
+}
+
+.menu ul li a:hover {
+  transition: background 0.4s;
+  background-color: #72b0e4;
+}
+
+.menu ul li a:hover {
+  color: black;
+}
+
+@media (max-width: 2200px) {
+  .menu {
+    margin-top: 22px;
+  }
+
+  .botao {
+    position: initial;
+    cursor: pointer;
+    margin-right: 100px;
+    width: 45px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu {
+    margin-left: 0px;
+  }
+  .menu.open {
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
+
+  .menu ul {
+    list-style: none;
+    margin: 10px;
+  }
+
+  .menu ul li {
+    margin: 20px 0;
+    background-color: #009ee2;
+    text-align: center;
+    align-items: center;
+  }
+
+  .menu ul li a {
+    font-size: 25px;
+    margin: 10px;
+    padding: 16px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+  }
+
+  .menu ul li:hover {
+    background-color: #72b0e4;
+    color: #000000;
+  }
+
+  .menu ul li a:hover {
+    color: #000000;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu {
+    top: 70px;
+    padding: 5px;
+  }
+
+  .menu.open {
+    top: 38px;
+    width: 100%;
+  }
+  .menu ul li a {
+    font-size: 15px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .botao {
+    width: 35px;
+  }
+}
+
+@media (max-width: 700px) {
+  .menu {
+    top: 70px;
+    padding: 5px;
+  }
+
+  .menu.open {
+    top: 38px;
+    width: 100%;
+  }
+  .menu ul li a {
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+  }
+  .botao {
+    width: 38px;
+  }
+}
