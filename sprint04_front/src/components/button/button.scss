@@ -1,0 +1,30 @@
+
+.button a {
+    font-size: 30px;
+    background-color: #009EE2;
+    color: #FFF;
+    padding: 15px;
+    border-radius: 35px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.button a:hover {
+    transition: background .4s;
+    background-color: #72b0e4;
+    color: #000000;
+}
+
+
+@media (max-width: 800px) {
+    .button a {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .button a {
+        font-size: 12px;
+    }
+}
+

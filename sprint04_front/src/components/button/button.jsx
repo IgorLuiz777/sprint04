@@ -1,7 +1,8 @@
 
 import Link from "next/link"
+import './button.scss'
 
-export default function Button () {
+export default function Button (props) {
 
     return(
         <div className="button">
