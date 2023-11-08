@@ -1,8 +1,8 @@
 
-
 .botao {
   width: 1px;
   margin-left: -100px;
+
 }
 
 .menu {
@@ -22,35 +22,38 @@
   font-size: 20px;
   font-weight: bolder;
   padding: 10px;
-  background-color: #009ee2;
-  color: white;
+  background-color: #009EE2;
+  color: #fff;
   padding: 12px;
   margin-left: 20px;
   text-decoration: none;
-  transition: background 0.4s;
+  transition: background .4s;
 }
 
 .menu ul li a:hover {
-  transition: background 0.4s;
+  transition: background .4s;
   background-color: #72b0e4;
 }
 
 .menu ul li a:hover {
-  color: black;
+  color: #000000;
 }
+
+
+
 
 @media (max-width: 2200px) {
   .menu {
     margin-top: 22px;
   }
-
+  
   .botao {
-    position: initial;
+    position:initial;
     cursor: pointer;
     margin-right: 100px;
     width: 45px;
   }
-
+  
   .menu {
     display: none;
   }
@@ -68,36 +71,38 @@
     left: 0;
     width: 100%;
   }
-
+  
   .menu ul {
     list-style: none;
     margin: 10px;
   }
-
+  
   .menu ul li {
     margin: 20px 0;
-    background-color: #009ee2;
+    background-color: #009EE2;
     text-align: center;
     align-items: center;
   }
-
+  
+  
   .menu ul li a {
     font-size: 25px;
     margin: 10px;
     padding: 16px;
     text-decoration: none;
-    color: #fff;
+    color: #FFF;
     display: block;
   }
-
+  
   .menu ul li:hover {
     background-color: #72b0e4;
     color: #000000;
   }
-
+  
   .menu ul li a:hover {
     color: #000000;
   }
+  
 }
 
 @media (max-width: 500px) {

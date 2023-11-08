@@ -1,13 +1,13 @@
-
-"use client"
+"use client";
 import { useState } from "react";
 import Link from "next/link";
-import './header2.scss'
+import "./header.scss";
+//import './css2.scss'
 
 export default function Header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
+  const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -22,13 +22,13 @@ export default function Header() {
       />
       <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
         <ul>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/cadastro">Cadastro</Link></li>
-          <li><Link href="/planos">Planos</Link></li>
-          <li><Link href="/cadastro-bike">Cadastro Bike</Link></li>
-          <li><Link href="/contato">Contate - nos</Link></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/cadastro">Cadastro</a></li>
+          <li><a href="/planos">Planos</a></li>
+          <li><a href="/cadastro-bike">Cadastro Bike</a></li>
+          <li><a href="/contato">Contate - nos</a></li>
         </ul>
       </div>
     </div>
   );
-}
+};
