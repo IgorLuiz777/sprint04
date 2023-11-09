@@ -2,7 +2,7 @@
 import Header from '@/components/header/header'
 import Footer from '@/components/footer/footer'
 import Logo from '@/components/logo/logo'
-import './globals.css'
+import './globals.scss'
 
 export const metadata = {
   title: 'Porto Seguro',

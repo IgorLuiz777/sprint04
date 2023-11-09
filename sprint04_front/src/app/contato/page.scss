@@ -1,0 +1,54 @@
+@import '../variaveis.scss';
+
+.formulario {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 70%;
+    margin: 100px auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.form1 {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bolder;
+}
+  
+.form label {
+    color: black;
+    margin-bottom: 5px;
+}
+  
+.form input, .form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+  
+.form textarea {
+    min-height: 13rem;
+    resize: vertical;
+}
+
+.contato-button {
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    width: 200px;
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contato-button:hover {
+    background-color: $secondary-color;
+    color: black;
+}
