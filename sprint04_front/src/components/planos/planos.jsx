@@ -1,5 +1,5 @@
 
-import './page.scss'
+import './planos.scss'
 
 export default function Planos() {
 

@@ -1,6 +1,7 @@
 
 import Button from "@/components/button/button"
 import './home.scss'
+import Planos from "../components/planos/planos"
 
 export default function Home() {
   return(
@@ -15,7 +16,11 @@ export default function Home() {
             <div className="divimg">
                 <img id="img1" src="bike2.webp" alt="Bike"/>
             </div>
+            
                 
+        </section>
+        <section className="planos">
+            <Planos></Planos>
         </section>
             
     </main>

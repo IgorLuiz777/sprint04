@@ -1,3 +1,5 @@
+@import '../../app/variaveis.scss';
+
 .footer {
   bottom: 0;
   width: 100%;
@@ -30,7 +32,7 @@
 
     &:hover {
       transition: background 0.4s;
-      background-color: #009ee2;
+      background-color: $primary-color;
     }
   }
 }
@@ -55,7 +57,7 @@
 
     &:hover {
       transition: background 0.4s;
-      color: #009ee2;
+      color: $primary-color;
     }
   }
 }
@@ -80,7 +82,7 @@
 
     &:hover {
       transition: background 0.4s;
-      color: #009ee2;
+      color: $primary-color;
     }
   }
 }

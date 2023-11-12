@@ -1,7 +1,8 @@
+@import '../../app/variaveis.scss';
 
 .button a {
     font-size: 30px;
-    background-color: #009EE2;
+    background-color: $primary-color;
     color: #FFF;
     padding: 15px;
     border-radius: 35px;
@@ -11,7 +12,7 @@
 
 .button a:hover {
     transition: background .4s;
-    background-color: #72b0e4;
+    background-color: $secondary-color;
     color: #000000;
 }
 

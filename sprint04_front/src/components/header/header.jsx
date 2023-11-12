@@ -22,11 +22,10 @@ export default function Header() {
       />
       <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/cadastro">Cadastro</a></li>
-          <li><a href="/planos">Planos</a></li>
-          <li><a href="/cadastro-bike">Cadastro Bike</a></li>
-          <li><a href="/contato">Contate - nos</a></li>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/cadastro">Cadastro</Link></li>
+          <li><Link href="/cadastro-bike">Cadastro Bike</Link></li>
+          <li><Link href="/contato">Contate - nos</Link></li>
         </ul>
       </div>
     </div>
