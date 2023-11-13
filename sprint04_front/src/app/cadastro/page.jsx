@@ -1,10 +1,13 @@
 "use client"
 import { useEffect, useState } from 'react';
-import './page.scss';
+import Link from 'next/link';
+import './page.scss'
 
 export default function Cadastro() {
+    const [id, setId] = useState('');
     const [cpf, setCpf] = useState('');
     const [cep, setCep] = useState('');
+    const [numero, setNumero] = useState('');
     const [logradouro, setLogradouro] = useState('');
     const [bairro, setBairro] = useState('');
     const [localidade, setLocalidade] = useState('');
@@ -33,6 +36,10 @@ export default function Cadastro() {
         const newName = e.target.value;
         setNome(newName);
     }
+    const handleNumeroChange = (e) => {
+        const newNumero = e.target.value;
+        setNumero(newNumero);
+    }
 
     const handleDataNascimentoChange = (e) => {
         const newDataNascimento = e.target.value;
@@ -49,6 +56,44 @@ export default function Cadastro() {
         setEmail(newEmail);
     }
 
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+
+        const novoCliente = {
+            id: id,
+            nome: nome,
+            dataNascimento: dataNascimento,
+            cpf: cpf,
+            email: email,
+            senha: senha,
+            endereco: {
+                logradouro: logradouro,
+                bairro: bairro,
+                cidade: localidade,
+                cep: cep,
+            }
+        };
+
+        if (numero) {
+            novoCliente.endereco.numero = numero;
+        }
+
+
+        fetch('http://localhost:8080/WebApi/rest/clientes', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(novoCliente),
+        })
+            .then(() => {
+                console.log('Cliente criado com sucesso');
+            })
+            .catch(error => {
+                console.error('Erro ao criar cliente', error);
+            });
+    }
+
     useEffect(() => {
         if (cep.length === 8) {
             fetch(`https://viacep.com.br/ws/${cep}/json/`)
@@ -60,7 +105,7 @@ export default function Cadastro() {
                     setCepVerified(true);
                 })
                 .catch(error => {
-                    console.error('Error fetching CEP data', error);
+                    console.error('Erro ao buscar dados do CEP', error);
                 });
         }
     }, [cep]);
@@ -69,7 +114,20 @@ export default function Cadastro() {
         <main>
             <section className="content">
                 <h2>Insira os seus dados para criar seu cadastro: </h2>
-                <form>
+                <form onSubmit={handleFormSubmit}>
+                    <div className="form">
+                        <label htmlFor="id">ID:</label>
+                        <input
+                            type="text"
+                            id="id"
+                            name="id"
+                            placeholder="Enter the ID"
+                            required
+                            value={id}
+                            onChange={(e) => setId(e.target.value)}
+                        />
+                    </div>
+
                     <div className="form">
                         <label htmlFor="nome">Nome:</label>
                         <input
@@ -107,6 +165,7 @@ export default function Cadastro() {
                             value={cpf}
                             onChange={formataCPF}
                         />
+                        <input type="submit" value="Verificar" required />
                     </div>
 
                     <div className="form">
@@ -141,8 +200,8 @@ export default function Cadastro() {
                             type="text"
                             name="cep"
                             placeholder="Digite seu CEP"
-                            pattern="\d{5}\-\d{3}"
-                            title="Digite o CEP no formato: xxxxx-xxx"
+                            pattern="\d{5}\d{3}"
+                            title="Digite o CEP no formato: xxxxxxxx"
                             value={cep}
                             onChange={handleCepChange}
                         />
@@ -194,13 +253,16 @@ export default function Cadastro() {
                                     id="numero"
                                     name="numero"
                                     placeholder="Digite o numero"
+                                    value={numero}
+                                    onChange={handleNumeroChange}
                                     required
                                 />
                             </div>
                         </div>
                     )}
-                    <button>enviar</button>
+                    <button type='submit'><Link href={"/cadastro-bike"}>Enviar</Link></button>
                 </form>
+                <p>Caso tenha já tenha uma conta clique <Link href={"/login"}>aqui</Link> para logar-se</p>
             </section>
         </main>
     );

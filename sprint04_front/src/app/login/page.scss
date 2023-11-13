@@ -7,29 +7,10 @@
     width: 50%;
     margin: 100px auto;
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 340px;
     justify-content: center;
     text-align: center;
     align-items: center;
-
-    p {
-        font-size: 25px;
-        a {
-            text-decoration: none;
-            color: $primary-color;
-        }
-    }
-}
-button {
-
-    a {
-        text-decoration: none;
-        color: black;
-        padding: 3px;
-        background-color: $primary-color;
-        font-size: 15px;
-        font-weight: bold;
-    }
 }
 
 .content h2 {
