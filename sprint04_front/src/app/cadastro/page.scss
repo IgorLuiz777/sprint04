@@ -21,15 +21,25 @@
     }
 }
 button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
 
     a {
         text-decoration: none;
-        color: black;
-        padding: 3px;
-        background-color: $primary-color;
-        font-size: 15px;
-        font-weight: bold;
+        color: inherit;
     }
+}
+
+button:hover {
+    background-color: $secondary-color;
+    color: black;
 }
 
 .content h2 {
