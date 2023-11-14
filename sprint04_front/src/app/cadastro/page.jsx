@@ -121,7 +121,7 @@ export default function Cadastro() {
                             type="text"
                             id="id"
                             name="id"
-                            placeholder="Enter the ID"
+                            placeholder="Digite o seu ID"
                             required
                             value={id}
                             onChange={(e) => setId(e.target.value)}
@@ -260,7 +260,7 @@ export default function Cadastro() {
                             </div>
                         </div>
                     )}
-                    <button type='submit'><Link href={"/cadastro-bike"}>Enviar</Link></button>
+                    <button type='submit'><Link href={"/login"}>Enviar</Link></button>
                 </form>
                 <p>Caso tenha já tenha uma conta clique <Link href={"/login"}>aqui</Link> para logar-se</p>
             </section>
