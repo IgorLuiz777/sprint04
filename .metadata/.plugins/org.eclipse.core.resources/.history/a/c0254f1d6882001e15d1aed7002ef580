@@ -1,0 +1,17 @@
+package br.com.fiap.bo;
+
+import java.sql.SQLException;
+
+import br.com.fiap.dao.EnderecoDao;
+import br.com.fiap.entity.Endereco;
+
+public class EnderecoBo {
+	
+private EnderecoDao enderecoDao;
+	
+	public void cadastrar(Endereco endereco) throws SQLException {
+		enderecoDao = new EnderecoDao();
+		enderecoDao.inserir(endereco);
+	}
+
+}

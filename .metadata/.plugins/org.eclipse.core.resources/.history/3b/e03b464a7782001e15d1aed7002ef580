@@ -1,0 +1,22 @@
+package br.com.fiap.bo;
+
+import java.sql.SQLException;
+
+import br.com.fiap.dao.ClienteDao;
+import br.com.fiap.entity.Cliente;
+
+public class ClienteBo {
+	
+	private ClienteDao clienteDao;
+	
+	
+	public void cadastrar(Cliente cliente) throws SQLException {
+		clienteDao = new ClienteDao();
+		clienteDao.inserir(cliente);
+	}
+	
+	public Cliente buscarPorId(int id) throws SQLException {
+		clienteDao = new ClienteDao();
+		return clienteDao.buscarPorId(id);
+	}
+}

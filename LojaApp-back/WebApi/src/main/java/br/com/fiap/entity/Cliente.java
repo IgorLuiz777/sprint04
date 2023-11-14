@@ -1,0 +1,105 @@
+package br.com.fiap.entity;
+
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Cliente {
+	
+	private String nome;
+	private String dataNascimento;
+    private String cpf;
+    private String email;
+    private String telefone;
+    private Endereco endereco;
+    private int id;
+    private String senha;
+    private Bicicleta bicicletaId;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public Bicicleta getBicicletaId() {
+        return bicicletaId;
+    }
+
+    public void setBicicletaId(Bicicleta bicicletaId) {
+        this.bicicletaId = bicicletaId;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(String data) {
+        this.dataNascimento = data;
+    }
+    public String getCpf() {
+        return cpf;
+    }
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getTelefone() {
+        return telefone;
+    }
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+    public Endereco getEndereco() {
+        return endereco;
+    }
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public void exibirDados() {
+        System.out.println("\n" + "Nome: " + this.nome);
+        System.out.println("Data de nascimento: " + this.dataNascimento);
+        System.out.println("CPF: " + this.cpf);
+        System.out.println("Email: " + this.email);
+        System.out.println("Telefone: " + this.telefone);
+        System.out.println("\n" + "ENDEREÇO" + "\n");
+        System.out.println("Logradouro: " + endereco.getLogradouro());
+        System.out.println("Numero: " + endereco.getNumero());
+        System.out.println("Complemento: " + endereco.getComplemento());
+        System.out.println("Bairro: " + endereco.getBairro());
+        System.out.println("Cidade: " + endereco.getCidade());
+        System.out.println("Estado: " + endereco.getEstado());
+        System.out.println("CEP: " + endereco.getCep() + "\n");
+    }
+
+    public void cadastrarCliente(String nome, String email, String cpf, String dataNascimento) {
+        this.nome = nome;
+        this.email = email;
+        this.cpf = cpf;
+        this.dataNascimento = dataNascimento;
+    }
+
+
+}
